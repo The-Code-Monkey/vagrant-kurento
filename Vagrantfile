@@ -9,8 +9,8 @@ Vagrant.configure(2) do |config|
     config.hostsupdater.remove_on_suspend = true
   end
 
-  config.vm.hostname = "kurento.dev"
-  config.vm.network :private_network, ip: "172.17.8.23"
+  config.vm.hostname = "kurento.test"
+  config.vm.network :private_network, ip: "192.168.10.10"
 
   config.vm.provision :shell, :inline => <<-EOS
     add-apt-repository ppa:kurento/kurento
